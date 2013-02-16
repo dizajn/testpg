@@ -34,6 +34,7 @@ var app = {
         var self = this;
         self.registerEvents();
         this.store = new MemoryStore(function() {
+            self.showAlert('Store Initialized', 'Info');
             $('body').html(new HomeView(self.store).render().el);
         });
     }
